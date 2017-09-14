@@ -11,19 +11,11 @@ namespace INotifyPropertyChanged_Style1
     {
         private Action<object> execute;
         private Predicate<object> canExecute;
-        private ICommand click;
-        private Func<object, bool> canClick;
 
         public CustomCommand(Action<object> execute, Predicate<object> canExecute)
         {
             this.execute = execute;
             this.canExecute = canExecute;
-        }
-
-        public CustomCommand(ICommand click, Func<object, bool> canClick)
-        {
-            this.click = click;
-            this.canClick = canClick;
         }
 
         public event EventHandler CanExecuteChanged
